@@ -1,0 +1,46 @@
+{
+  "name": "360-cian-hackathon",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "aframe": "^0.8.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-router": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.83.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start:browser\" \"npm run start:server\" \"sleepms 10000 && npm run open\"",
+    "start:browser": "BROWSER=none react-scripts start",
+    "start:server": "npx cra-universal start",
+    "build": "react-scripts build",
+    "build:all": "npx cra-universal build && cd dist/ && npm install --production",
+    "serv": "npm run build:all && node dist/server/bundle.js",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "clean": "npx cra-universal clean",
+    "open": "open http://localhost:3001",
+    "lint:css": "node_modules/.bin/stylelint \"npm run clean*.css\"",
+    "lint:css:fix": "node_modules/.bin/stylelint --fix \"*.css\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "cra-universal": "^4.2.0",
+    "open-cli": "^1.0.5",
+    "semantic-ui": "^2.4.2",
+    "sleep-ms": "^2.0.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

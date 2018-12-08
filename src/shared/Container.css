@@ -1,0 +1,13 @@
+.Container {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  padding: 68px 0 16px 0;
+}
+
+@media only screen and (max-width: 767px) {
+  .Container .Layout {
+    min-width: calc(100% - 2em) !important;
+  }
+
+}

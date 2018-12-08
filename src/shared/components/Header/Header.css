@@ -1,0 +1,15 @@
+.Header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 0;
+  height: 52px;
+  background-color: #2b87db;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.Header div.Header-title {
+  color: white;
+}
+

@@ -1,0 +1,258 @@
+.ImageGroup {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .ImageGroup {
+    margin: 0 -16px;
+  }
+}
+
+.Image {
+  cursor: pointer;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.ImageContainer {
+  position: relative;
+  width: calc(50% - 1rem);
+  margin: 0 0.5rem 1rem;
+
+}
+
+.ImageLabel {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0,0,0,.35);
+  color: white;
+  font-size: 14px;
+  line-height: 30px;
+  padding: 0 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 640px) {
+  .ImageContainer {
+    position: relative;
+    width: calc(25% - 1rem);
+    margin: 0 0.5rem 1rem;
+  }
+
+  .ImageLabel {
+    padding: 0 6px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .ImageContainer {
+    position: relative;
+    width: 200px;
+    margin: 0 16px 16px 0;
+  }
+}
+
+.ImageContainer::before {
+  content: "";
+  display: block;
+  padding-top: 100%; /* С помощью этого padding мы задаем высоту равную ширине блока */
+}
+
+div.ui.small.modal.Image-modal {
+  position: relative;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0 !important;
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+.Image-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.Image-like {
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  height: 30px;
+  padding: 0 8px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px !important;
+}
+.Image-like--small {
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  height: 26px;
+  padding: 0 8px;
+  width: 50px;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px !important;
+}
+.Image-like--small i.icon {
+  margin-top: 2px !important;
+}
+
+.Image-backward {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px !important;
+  left: 20px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.Image-forward {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px !important;
+  right: 20px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.Image-random {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px !important;
+  margin-left: -15px !important;
+  left: 50%;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  width: 60px;
+  height: 60px;
+  border-radius: 100%  !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Image-stories {
+  position: absolute;
+  top: 8px;
+  margin: 0 !important;
+  right: 26px;
+  cursor: pointer;
+  background: rgba(0,0,0,.35);
+  z-index: 2;
+  color: white;
+  font-size: 20px;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  line-height: 20px;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Image-button {
+  position: absolute;
+  bottom: 20px;
+  margin: 0 !important;
+  left: 18px;
+  cursor: pointer;
+  background: rgba(0,0,0, 0.75);
+  z-index: 2;
+  color: white;
+  font-size: 16px;
+  padding: 6px 16px;
+  box-sizing: border-box;
+  line-height: 16px;
+  border-radius: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Image-button:hover {
+  background: rgba(0,0,0, 1);
+}
+
+.Image-close > i.icon,
+.Image-forward > i.icon,
+.Image-backward > i.icon,
+.Image-random > i.icon,
+.Image-stories > i.icon,
+.Image-like > i.icon
+{
+  margin: 0;
+}
+
+.Image-random--stories {
+  animation: 5s linear 0s normal none infinite running rot;
+  -webkit-animation: 5s linear 0s normal none infinite running rot;
+}
+
+
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
